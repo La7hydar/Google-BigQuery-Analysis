@@ -6,7 +6,7 @@ A highly polished, interactive Power BI dashboard designed using a premium **Mid
 
 ## 📸 Dashboard Preview
 <p align="center">
-  <img src="[YOUR_IMAGE_URL_HERE](https://github.com/La7hydar/Google-BigQuery-Analysis/blob/874c9a721263f4bd5986f32eff192c486c4a7fca/Google%20Analytics/Main%20Dashboard.png)" alt="Power BI Dashboard Overview" width="100%">
+  <img src="https://github.com/La7hydar/Google-BigQuery-Analysis/blob/874c9a721263f4bd5986f32eff192c486c4a7fca/Google%20Analytics/Main%20Dashboard.png" alt="Power BI Dashboard Overview" width="100%">
 </p>
 
 <p align="center">
