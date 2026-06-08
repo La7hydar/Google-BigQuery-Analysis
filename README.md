@@ -10,7 +10,7 @@ A highly polished, interactive Power BI dashboard designed using a premium **Mid
 </p>
 
 <p align="center">
-  <img src="[YOUR_IMAGE_URL_HERE](https://github.com/La7hydar/Google-BigQuery-Analysis/blob/874c9a721263f4bd5986f32eff192c486c4a7fca/Google%20Analytics/Dark%20Mode.png)" alt="Power BI Dashboard Dark Mode Overview" width="100%">
+  <img src="https://github.com/La7hydar/Google-BigQuery-Analysis/blob/874c9a721263f4bd5986f32eff192c486c4a7fca/Google%20Analytics/Dark%20Mode.png" alt="Power BI Dashboard Dark Mode Overview" width="100%">
 </p>
 
 ---
