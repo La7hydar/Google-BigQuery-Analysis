@@ -1,62 +1,73 @@
 # 🚀 Google Analytics E-Commerce Interactive Dashboard (Power BI)
 
-Sebuah dashboard Power BI interaktif berpenampilan premium yang didesain menggunakan tema modern **Midnight Navy & Cyberpunk Neon**. Proyek ini menganalisis perilaku pengguna, kategori perangkat (*device*), dan distribusi geografis data e-commerce Google Analytics dalam batas waktu pengerjaan kilat selama **2 hari**.
+A highly polished, interactive Power BI dashboard designed using a premium **Midnight Navy & Cyberpunk Neon** theme. This project analyzes user behavior, device categories, and geographic traffic distributions from Google Analytics e-commerce data under a strict **2-day rapid development timeline**.
 
 ---
 
-## 📌 Ringkasan Proyek & Keunikan
-Dashboard ini mengubah log data mentah Google Analytics menjadi wawasan bisnis yang interaktif. Untuk memaksimalkan estetika dan kenyamanan visual, dashboard ini menghindari template standar bawaan pabrik dan menerapkan trik desain khusus:
-* **Custom Geometric Charts:** Grafik Donut 3 bagian unik yang memanfaatkan potongan *dummy* tersembunyi sebesar $1/4$ di pojok atas-kiri. Area kosong ini dimanfaatkan secara estetik untuk menaruh judul metrik dan menghemat ruang (*whitespace*).
-* **True/False Gauge KPI:** Menggunakan Gauge Chart bawaan yang dikalibrasi ulang untuk menampilkan persentase murni pengguna Mobile (`isMobile`), disesuaikan dengan bahasa desain Google versi *dark-mode*.
-* **Interaksi Super Responsif:** Sinkronisasi filter yang mendalam di semua grafik, kartu KPI, dan tombol navigasi halaman.
+## 📸 Dashboard Preview
+<p align="center">
+  <img src="[YOUR_IMAGE_URL_HERE](https://github.com/La7hydar/Google-BigQuery-Analysis/blob/874c9a721263f4bd5986f32eff192c486c4a7fca/Google%20Analytics/Main%20Dashboard.png)" alt="Power BI Dashboard Overview" width="100%">
+</p>
+
+<p align="center">
+  <img src="[YOUR_IMAGE_URL_HERE](https://github.com/La7hydar/Google-BigQuery-Analysis/blob/874c9a721263f4bd5986f32eff192c486c4a7fca/Google%20Analytics/Dark%20Mode.png)" alt="Power BI Dashboard Dark Mode Overview" width="100%">
+</p>
 
 ---
 
-## 📅 Garis Waktu & Eksekusi Cepat (Selesai dalam 2 Hari)
-
-Proyek ini direkayasa, dibersihkan, divalidasi, dan didesain dari nol hingga selesai hanya dalam waktu **48 jam**:
-* **Hari 1 (Data Engineering):** Proses penarikan data (*ingestion*), pemahaman skema, penanganan nilai kosong (*missing values*), dan pembuatan rumus dasar DAX.
-* **Hari 2 (UI/UX Design):** Penyusunan tata letak (*wireframing*), penyesuaian trik geometri visual, pewarnaan tema gelap, dan uji coba interaksi (*QA Testing*).
-
----
-
-## 📥 1. Sumber Data (Sourcing)
-Dataset yang digunakan berasal dari **Google Analytics Sample Dataset (BigQuery / Google Merchandise Store)**.
-* **Tipe Data:** Data web analytics berbasis sesi (*session*) dan hit-level.
-* **Dimensi Utama:** `deviceCategory`, `isMobile`, `country`, `date`.
-* **Metrik Utama:** `visitNumber`, `visitId` (digunakan untuk menghitung total kunjungan unik).
+## 📌 Project Overview & Highlights
+This dashboard transforms raw Google Analytics event logs into actionable business insights. To maximize visual appeal and storytelling, it skips standard generic templates in favor of bespoke, custom-engineered visual designs:
+* **Custom Geometric Charts:** A unique 3-part Donut Chart featuring an invisible $1/4$ slice at the top-left to embed aesthetic metric titles and improve whitespace management.
+* **True/False Gauge KPI:** A highly visual, calibrated Gauge Chart tracking `isMobile` traffic share, styled with Google's core dark-mode design language.
+* **Ultra-Responsive Interactions:** Deep visual synchronization across all charts, cards, and custom multi-page navigation links.
 
 ---
 
-## 🧹 2. Proses Pembersihan & Penyiapan Data (Cleaning & Prep)
-Agar data siap pakai di dalam Power BI dalam waktu 2 hari, langkah-langkah *data engineering* berikut telah dilakukan:
+## 📅 Timeline & Rapid Execution (Done in 2 Days)
 
-### Transformasi Data
-1.  **Format Tipe Data:** Mengubah teks boolean mentah menjadi flag sistem yang absolut (misalnya, mengubah format kolom `isMobile` menjadi format `TRUE/FALSE` murni).
-2.  **Agregasi Data:** Memangkas data log aktivitas yang sangat besar untuk fokus pada metrik kunjungan utama (`visitNumber` dan `visitId`) demi mempercepat waktu *loading* grafik.
-3.  **Optimasi Top 7:** Menerapkan logika filter tingkat visual pada dimensi negara (`country`) untuk menyajikan **Top 7 Countries by Visit**, sehingga tabel menjadi ringkas dan membuang ratusan baris data kecil yang kurang berdampak.
-
-### Logika Rumus DAX Measures (Trik Canggih)
-Agar visualisasi dapat menampilkan efek khusus, data mentah tidak langsung ditarik ke dalam grafik, melainkan diolah menggunakan rumus DAX:
-* **Trik Donut Transparan 3 Bagian:** Menghitung potongan *dummy* sebesar $25\%$ yang proporsional terhadap total data untuk memicu efek donat terpotong huruf C (`Donut_Sapi_Transparan = [Total_Semua_Device] * (1/3)`).
-* **Persentase Aman:** Menggunakan fungsi `DIVIDE()` pada Gauge Chart untuk mencegah terjadinya error pembagian dengan angka nol (*zero-division bug*).
+This project was successfully engineered, cleaned, validated, and designed end-to-end within **48 hours**:
+* **Day 1 (Data Engineering):** Data Ingestion, Schema Understanding, Missing Value Handling, and Core DAX Modeling.
+* **Day 2 (UI/UX Design):** Interface Wireframing, Custom Geometric Visual Adjustments, Color Theming, and Interactivity QA.
 
 ---
 
-## 🌟 3. Kelebihan & "Superpower" Dashboard Ini
-Mengapa dashboard ini jauh lebih unggul dibandingkan laporan standar biasa?
-
-1.  **Palet Midnight Navy Premium (Bukan Hitam Pekat):** Menggunakan warna dasar samudra gelap `#0B0E14` dan panel kotak `#161B26` yang dipadukan dengan neon ungu `#A370F7` dan biru elektrik `#4D7CFF`. Menghindari mata lelah akibat kontras hitam-putih yang terlalu tajam.
-2.  **Layout Presisi Tanpa Magnet:** Mematikan fitur `Snap to Grid` bawaan Power BI agar penempatan objek visual bisa digeser pixel-demi-pixel secara super presisi demi estetika dashboard yang seimbang.
-3.  **Navigasi Halaman Instan:** Pindah halaman mulus menggunakan aset gambar yang diberi perintah *Action Page Navigation*, menghilangkan tab menu bawaan yang kaku.
-4.  **Sinkronisasi Filter Anti-Gagal:** Pembuatan rumus DAX murni memastikan bahwa ketika pengguna mengklik potongan grafik *Desktop* atau *Mobile*, angka di Card KPI besar otomatis ikut berubah memfilter data secara instan.
+## 📥 1. How the Data Was Sourced
+The dataset originates from the official **Google Analytics Sample Dataset (BigQuery / Google Merchandise Store)**. 
+* **Data Type:** Session and hit-level web analytics data.
+* **Key Dimensions Extracted:** `deviceCategory`, `isMobile`, `country`, `date`.
+* **Key Metrics Extracted:** `visitNumber`, `visitId` (used for unique traffic counts).
 
 ---
 
-## 🛠️ Cara Menjalankan Proyek Ini
-1. Clone repository ini atau unduh file `.pbix` yang tersedia.
-2. Buka file tersebut menggunakan aplikasi **Power BI Desktop**.
-3. *Tips saat mengedit:* Untuk menguji tombol navigasi halaman di dalam Power BI Desktop, tahan tombol **`Ctrl` pada keyboard lalu klik** gambar navigasi tersebut!
+## 🧹 2. Data Cleaning & Preparation Process
+To deliver clean, analytics-ready tables inside Power BI within the 2-day constraint, the following data engineering steps were performed:
+
+### Data Ingestion & Transformation
+1.  **Type Formatting:** Converted boolean strings into true system flags (e.g., transforming `isMobile` into absolute `TRUE/FALSE` format).
+2.  **Granular Aggregation:** Filtered down huge event logs to focus on core visit markers (`visitNumber` and `visitId`) to optimize query loading times.
+3.  **Top N Optimization:** Implemented visual-level filtering logic directly onto heavy dimensions like `country` to compute a dynamic **Top 7 Countries by Visit** layout, removing hundreds of low-impact rows from the main view canvas.
+
+### Core DAX Modeling (The Logical Magic)
+Rather than pulling raw columns directly into visual buckets, clean **DAX Measures** were written to bypass Power BI's default filtering limitations:
+* **The 3-Piece Transparent Donut Tactic:** Calculated a `$25\%$` dummy slice proportional to total devices to simulate a physical open-gap geometry (`Donut_Sapi_Transparan = [Total_Semua_Device] * (1/3)`).
+* **Safe Percentages:** Handled potential zero-division bugs elegantly when measuring mobile share metrics using `DIVIDE()`.
 
 ---
-*Dikembangkan dengan 💡 dan 🚀 hanya dalam waktu 2 Hari.*
+
+## 🌟 3. Key Advantages & Superpowers of This Dashboard
+Why is this dashboard better than standard default reports?
+
+1.  **Premium Dark Navy Palette (No Pure Black):** Built on an elegant `#0B0E14` (Midnight Navy) canvas with glowing accent colors (`#4D7CFF` and `#A370F7`). This avoids the high-contrast eye strain of default dark modes while maintaining a luxury tech feel.
+2.  **Anti-Magnet Pixel-Perfect Layout:** Arranged entirely with custom manual boundaries by turning off native `Snap to Grid` limitations, ensuring layout symmetry.
+3.  **Zero-Overhead Page Navigation:** Seamless page transitions bound directly to asset icons via local actions, removing the clutter of raw tabs.
+4.  **Bulletproof Filter Synchronization:** Unified relational data tables ensuring that any user clicking a device slice instantly mirrors accurate visitor numbers into the main KPI Card.
+
+---
+
+## 🛠️ How to View the Project
+1. Clone this repository or download the `.pbix` file.
+2. Open the file using **Power BI Desktop**.
+3. *Tip for local editing:* To test the navigation icons inside Power BI Desktop, hold the **`Ctrl` key and click** the image buttons!
+
+---
+*Developed with 💡 and 🚀 in just 2 Days.*
